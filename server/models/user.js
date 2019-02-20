@@ -33,7 +33,7 @@ userSchema.pre('save', function(next) {
 
 // adding instance method
 userSchema.methods.comparePassword = function(candidatePassword, callback) {
-  bcrypt.compare(candidatePassoword, this.password, function(err, isMatch) {
+  bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
     if (err) { return callback(err); }
     callback(null, isMatch);
   });
