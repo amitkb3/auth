@@ -1,5 +1,7 @@
 import React from 'react';
 
+import requireAuth from './requireAuth';
+
 class Feature extends React.Component {
   render() {
     return(
@@ -10,4 +12,4 @@ class Feature extends React.Component {
   }
 }
 
-export default Feature;
+export default requireAuth(Feature);
